@@ -48,7 +48,7 @@ cloudinary.v2.uploader.upload(req.file.path,
         link=result.url;
         console.log("Hi");
         console.log(link);
-        return res.redirect('http://localhost:3000/');
+        return res.redirect('https://image-up1.herokuapp.com/');
       });
 });
  
