@@ -1,7 +1,7 @@
 const route = require('express').Router()
 const path=require('path')
 route.get('/', (req, res) => {
-    var x='img1.png';
+    var x='img2.png';
     res.sendFile(path.join(__dirname,'../public/uploads/'+x))
   
   })
