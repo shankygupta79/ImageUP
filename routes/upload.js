@@ -50,12 +50,13 @@ router.get('/drag',(req,res)=>{
   res.sendFile(path.join(__dirname,'./drag.jpg'))
   
 })
+
 router.post("/fileupload",upload.single('image'),function(req,res,next){
 const filename=req.file.filename;
 cloudinary.v2.uploader.upload(req.file.path, 
       function(error, result) {console.log(result.url, error)
         link=result.url;
-        console.log("Hi");
+        link=link.replace("http", "https");
         console.log(link);
         return res.redirect('https://image-up1.herokuapp.com/');
       });
