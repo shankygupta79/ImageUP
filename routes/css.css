@@ -14,6 +14,19 @@
     border: 4px dashed #009578;
     border-radius: 10px;
   }
+  .btn{
+    background-color: royalblue;
+    padding:5px;
+    width: 70px;
+    border-radius: 5px;
+    font-family: Lobster, Monospace;
+    color: white;
+  }
+  .btn:hover{
+    background-color:steelblue;
+    cursor: pointer;
+    
+  }
   
   .drop-zone--over {
     border-style: solid;

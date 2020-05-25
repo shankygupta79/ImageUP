@@ -19,10 +19,11 @@
     <span class="drop-zone__prompt"> Drag Files here of Click to Upload</span>
     <input type="file" name="image" class="drop-zone__input">
   </div>
-  <input type="submit" value="Upload"/> 
+  <button type="submit" value="Upload/" class="btn">Upload</button>
 </form>
-<div >
-<img v-bind:src="link" v-if="link" alt="Smiley face" height="102" width="102">
+<div ><br>
+Last Uploade File is 
+<img v-bind:src="link" v-if="link" alt="Smiley face">
 </div></div>
 <script>
   const acc = new Vue({
