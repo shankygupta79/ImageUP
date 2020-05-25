@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
+const path=require('path')
 const Imgs = require('../db').Imgs
 const cloudinary = require('cloudinary');
 cloudinary.config({
@@ -39,6 +40,14 @@ router.get('/',function(req,res){
 var link='';
 router.get('/url',(req,res)=>{
   res.json({url:link})
+  
+})
+router.get('/css',(req,res)=>{
+  res.sendFile(path.join(__dirname,'./css.css'))
+  
+})
+router.get('/drag',(req,res)=>{
+  res.sendFile(path.join(__dirname,'./drag.jpg'))
   
 })
 router.post("/fileupload",upload.single('image'),function(req,res,next){
